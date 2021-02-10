@@ -1,0 +1,130 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "createdAt": "2021-01-14T20:54:28.754Z",
+      "createdBy": "admin",
+      "name": "Grand Ballroom A",
+      "capacity": 100
+    },
+    {
+      "id": 2,
+      "createdAt": "2021-01-14T20:54:28.754Z",
+      "createdBy": "admin",
+      "name": "Grand Ballroom B",
+      "capacity": 120
+    },
+    {
+      "id": 3,
+      "createdAt": "2021-01-14T20:54:28.754Z",
+      "createdBy": "admin",
+      "name": "Vail",
+      "capacity": 40
+    },
+    {
+      "id": 4,
+      "createdAt": "2021-01-14T20:54:28.754Z",
+      "createdBy": "admin",
+      "name": "Breck",
+      "capacity": 65
+    }
+  ],
+  "sessions": [
+    {
+      "id": 1,
+      "title": "Always be Coding",
+      "speakerId": 1,
+      "abstract": "Info about Always be Coding session",
+      "time": "2021-01-14T08:00:00.000Z",
+      "roomId": 1,
+      "createdAt": "2021-01-14T20:54:28.754Z",
+      "createdBy": "admin",
+      "level": "intermediate"
+    },
+    {
+      "id": 2,
+      "title": "Intro to Programming",
+      "speakerId": 2,
+      "abstract": "Info about Intro to Programming session",
+      "time": "2021-01-14T09:00:00.000Z",
+      "roomId": 2,
+      "createdAt": "2021-01-14T20:54:28.754Z",
+      "createdBy": "admin",
+      "level": "beginner"
+    },
+    {
+      "id": 3,
+      "title": "Which Framework is Right for You?",
+      "speakerId": 3,
+      "abstract": "Info about Which Framework is Right for You? session",
+      "time": "2021-01-14T10:00:00.000Z",
+      "roomId": 3,
+      "createdAt": "2021-01-14T20:54:28.754Z",
+      "createdBy": "admin",
+      "level": "advanced"
+    },
+    {
+      "id": 4,
+      "title": "Data Structures for Everyone",
+      "speakerId": 4,
+      "abstract": "Info about Data Structures for Everyone session",
+      "time": "2021-01-14T11:00:00.000Z",
+      "roomId": 3,
+      "createdAt": "2021-01-14T20:54:28.754Z",
+      "createdBy": "admin",
+      "level": "beginner"
+    },
+    {
+      "createdAt": "2021-02-07T15:02:08.350Z",
+      "title": "Intermediate Programming AA",
+      "speakerId": 3,
+      "abstract": "Info about Intermediate Programming session",
+      "time": "2021-01-14T09:00:00.000Z",
+      "roomId": 3,
+      "level": "beginner",
+      "createdBy": "admin",
+      "id": 5
+    }
+  ],
+  "speakers": [
+    {
+      "id": 1,
+      "name": "Abe Adams",
+      "bio": "Abe is a dev",
+      "createdAt": "2021-01-14T20:54:28.754Z",
+      "createdBy": "admin",
+      "hasSpokeBefore": true
+    },
+    {
+      "id": 2,
+      "name": "Vicky Vasquez",
+      "bio": "Vicky is a dev",
+      "createdAt": "2021-01-14T20:54:28.754Z",
+      "createdBy": "admin",
+      "hasSpokeBefore": true
+    },
+    {
+      "id": 3,
+      "name": "Charlie Cook",
+      "bio": "Charlie is a dev",
+      "createdAt": "2021-01-14T20:54:28.754Z",
+      "createdBy": "admin",
+      "hasSpokeBefore": false
+    },
+    {
+      "id": 4,
+      "name": "Maria Moore",
+      "bio": "Maria is a dev",
+      "createdAt": "2021-01-14T20:54:28.754Z",
+      "createdBy": "admin",
+      "hasSpokeBefore": false
+    },
+    {
+      "createdAt": "2021-02-07T13:57:46.955Z",
+      "name": "Billy Bob",
+      "hasSpokeBefore": false,
+      "createdBy": "admin",
+      "id": 5
+    }
+  ]
+}
