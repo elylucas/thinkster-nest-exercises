@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { SpeakersRepository } from 'src/data/repositories/speakers.repository';
 import { SpeakerEntity } from 'src/data/speaker.entity';
 
@@ -21,8 +21,29 @@ export class SpeakersController {
   }
 
   @Get()
-  getList(@Query('name') name?: string, @Query('hasSpokenBefore') hasSpokenBefore?: boolean) {
+  getList(@Query('name') name?: string, @Query('hasSpokenBefore') hasSpokenBeforeStr?: string) {
+    let hasSpokenBefore: boolean;
+    if (hasSpokenBeforeStr === 'true') {
+      hasSpokenBefore = true;
+    } else if (hasSpokenBeforeStr === 'false') {
+      hasSpokenBefore = false;
+    }
     return this.speakersRepository.getAll({ name, hasSpokenBefore });
   }
-  
+
+  @Put(':id')
+  update(@Param('id') idStr: string, @Body() speaker: unknown) {
+    const id = parseInt(idStr, 10);
+    const speakerEntity = Object.assign(new SpeakerEntity(), speaker);
+    speakerEntity.createdBy = 'admin';
+    return this.speakersRepository.update(id, speakerEntity);
+  }
+
+  @Delete(':id')
+  delete(@Param('id') idStr: string) {
+    const id = parseInt(idStr, 10);
+    return this.speakersRepository.delete(id);
+  }
+
+
 }

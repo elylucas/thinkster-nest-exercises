@@ -6,7 +6,7 @@ import { SessionEntity } from 'src/data/session.entity';
 export class SessionsController {
 
   constructor(private sessionsRepository: SessionsRepository) { }
-  
+
   @Get(':id')
   get(@Param('id') id: number) {
     return this.sessionsRepository.get(id);

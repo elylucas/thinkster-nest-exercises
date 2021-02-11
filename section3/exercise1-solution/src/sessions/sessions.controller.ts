@@ -6,10 +6,9 @@ import { SessionEntity } from 'src/data/session.entity';
 export class SessionsController {
 
   constructor(private sessionsRepository: SessionsRepository) { }
-  
+
   @Get(':id')
-  get(@Param('id') idStr: string) {
-    const id = parseInt(idStr, 10);
+  get(@Param('id') id: number) {
     return this.sessionsRepository.get(id);
   }
 
@@ -26,18 +25,15 @@ export class SessionsController {
   }
 
   @Put(':id')
-  update(@Param('id') idStr: string, @Body() session: unknown) {
-    const id = parseInt(idStr, 10);
+  update(@Param('id') id: number, @Body() session: unknown) {
     const sessionEntity = Object.assign(new SessionEntity(), session);
     sessionEntity.createdBy = 'admin';
     return this.sessionsRepository.update(id, sessionEntity);
   }
 
   @Delete(':id')
-  delete(@Param('id') idStr: string) {
-    const id = parseInt(idStr, 10);
+  delete(@Param('id') id: number) {
     return this.sessionsRepository.delete(id);
   }
-
 
 }
