@@ -13,8 +13,7 @@ export class RoomsController {
   }
 
   @Get()
-  getList(@Query('name') name: string, @Query('capacity') capacityStr: string) {
-    const capacity = parseInt(capacityStr, 10);
+  getList(@Query('name') name: string, @Query('capacity') capacity: number) {
     return this.roomsRepository.getAll({ name, capacity });
   }
 
