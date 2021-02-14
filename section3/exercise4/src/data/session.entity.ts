@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString, IsNumber, IsOptional, IsDate } from 'class-validator';
+import { IsNotEmpty, IsString, IsNumber, IsOptional, IsIn } from 'class-validator';
 
 export class SessionEntity {
   id: number;
@@ -16,7 +16,6 @@ export class SessionEntity {
   abstract?: string;
 
   @IsOptional()
-  @IsDate({ message: 'Time must be a date' })
   time: Date;
 
   @IsNumber({}, { message: 'RoomId must be a number' })
@@ -24,5 +23,7 @@ export class SessionEntity {
 
   createdAt: Date = new Date();
   createdBy: string;
+
+  @IsIn(['beginner', 'intermediate', 'advanced'])
   level: 'beginner' | 'intermediate' | 'advanced';
 }

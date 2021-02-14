@@ -1,4 +1,3 @@
-
 export class SessionEntity {
   id: number;
   title: string;
